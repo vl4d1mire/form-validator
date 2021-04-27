@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Sign Up Today</h1>
+<!--        Form    -->
+    <form id="form">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="number" id="phone" placeholder="000-000-0000">
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="email@address.com">
+        </div>
+        <div class="form-group">
+            <label for="url">Website Url</label>
+            <input type="url" id="url" placeholder="http://google.com">
+        </div>
+        <div class="form-group">
+            <label for="password1">Password</label>
+            <input type="password" id="password1" placeholder="Create Password (Min 8 characters)">
+        </div>
+        <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password" id="password2" placeholder="Confirm Password">
+        </div>
+        <button type="submit">Register</button>
+    </form>
+<!--        Error/Success message   -->
+    <div class="message-container">
+        <h3 id="message">Don't Hesitate</h3>
+    </div>
+</div>
+</body>
+</html>

@@ -15,27 +15,40 @@
     <form id="form">
         <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="Full Name">
+            <input type="text" id="name" placeholder="Full Name" required minlength="3" maxlength="50">
         </div>
         <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="number" id="phone" placeholder="000-000-0000">
+            <input type="tel" id="phone" placeholder="000-000-0000" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         </div>
         <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="email@address.com">
+            <input type="email" id="email" placeholder="email@address.com" required>
         </div>
         <div class="form-group">
-            <label for="url">Website Url</label>
-            <input type="url" id="url" placeholder="http://google.com">
+            <label for="website">Website Url</label>
+            <input type="url" id="website" placeholder="http://google.com" required>
         </div>
         <div class="form-group">
             <label for="password1">Password</label>
-            <input type="password" id="password1" placeholder="Create Password (Min 8 characters)">
+            <input type="password"
+                   id="password1"
+                   placeholder="Create Password (Min 8 characters)"
+                   required
+                   pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$"
+                   title="Please include 8 to 15 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character"
+                   autocomplete="new-password"
+            >
         </div>
         <div class="form-group">
             <label for="password2">Confirm Password</label>
-            <input type="password" id="password2" placeholder="Confirm Password">
+            <input type="password"
+                   id="password2"
+                   placeholder="Confirm Password"
+                   required
+                   pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$"
+                   autocomplete="new-password"
+            >
         </div>
         <button type="submit">Register</button>
     </form>
@@ -44,5 +57,7 @@
         <h3 id="message">Don't Hesitate</h3>
     </div>
 </div>
+<!--    Script  -->
+<script src="script.js"></script>
 </body>
 </html>
